@@ -23,11 +23,12 @@ sudo service apache2 restart
 Thing:
     Base URL: http://server_host/index.php
     Command Method: POST
+    You may wish to tweak the "Refresh Time" setting to be a smaller value if you are using motion sensors
 Channel:
-    Command URL Extension: ?device_id=XXX (GET http://server_host/index.php for ID listing)
+    State URL Extension: ?device_id=XXX (GET http://server_host/index.php for ID listing, required only if you want to get device status like motion alerts)
+    Command URL Extension: ?device_id=XXX (GET http://server_host/index.php for ID listing, required only if you want to send commands to on/off switches)
     On Value: ON
     Off Value: OFF
-    Read/Write Mode: Write Only
 ```
 
 ### Sensors
